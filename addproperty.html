@@ -1,0 +1,28 @@
+/*Write a function called “addProperty”.
+Given an object, and a key, “addProperty” sets a new property on the given object with a value of true.
+Input:
+addProperty(myObj, “myProperty”);
+Output:
+{myProperty: true}*/
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="add"></div>
+        <script>
+        function addProperty(obj,key)
+    {
+        obj[key]="true";
+        return obj[key];
+    }
+    var person1={name:"anu", age:21};
+    document.getElementById("add").innerHTML+="<br>"+addProperty(person1,"email");
+        </script>
+</body>
+</html>
