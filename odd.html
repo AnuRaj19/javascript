@@ -1,0 +1,31 @@
+/*Write a function called “areBothOdd”.
+Given 2 numbers, “areBothOdd” returns whether or not both of the given numbers are odd.
+Input:
+areBothOdd(1, 3);
+Output:
+true*/
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="odd"></div>
+        <script>
+            function areBothOdd(a,b)
+    {
+        if ((a%2!=0)&&(b%2!=0))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    document.getElementById("odd").innerHTML+="<br>"+ areBothOdd(5,3);
+        </script>
+</body>
+</html>
