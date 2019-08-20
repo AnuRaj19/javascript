@@ -1,0 +1,49 @@
+/*
+Parsing a list of lists and convert into a JSON object:
+Write a function called “transformGeekData” that transforms some set of data from one format to another.
+Input (Array):
+var array = [[[“firstName”, “Vasanth”], [“lastName”, “Raja”], [“age”, 24], [“role”, “JSWizard”]], [[“firstName”, “Sri”], [“lastName”, “Devi”], [“age”, 28], [“role”, “Coder”]]];
+Output:
+[
+{firstName: “Vasanth”, lastName: “Raja”, age: 24, role: “JSWizard”},
+{firstName: “Sri”, lastName: “Devi”, age: 28, role: “Coder”}
+]
+
+*/
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+    <script>
+    function transformemployeedata(data){
+    var output=[];
+   
+
+//objkeys=Object.keys(data);
+data.forEach(element => {
+    var objoutput={};
+    element.forEach(i=>{
+        
+    objoutput[i[0]]=i[1];
+  
+   
+    });
+    output.push (objoutput);
+
+});
+
+return JSON.stringify( output);
+
+    }
+    var data=[[["firstName","vasanth"],["lastName","raja"],["age",24],["role","jswizard"]],[["firstName","sri"],["lastName","devi"],["age","28"],["role","coder"]]]
+            document.getElementById("print").innerHTML=transformemployeedata(data);
+</script>
+    
+</body>
+</html>
