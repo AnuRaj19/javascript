@@ -1,0 +1,41 @@
+/*
+Parsing a list of lists and convert into a JSON object:
+Write a function “fromListToObject” which takes in an array of arrays, and returns an object with each pair of elements in the array as a key-value pair.
+Input (Array):
+var array = [[“make”, “Ford”], [“model”, “Mustang”], [“year”, 1964]];
+Output:
+var object = {
+make : “Ford”
+model : “Mustang”,
+year : 1964
+}
+
+*/
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+    <script>
+    function ListToObject(data){
+        var output={};
+        data.forEach(element => {
+            output[element[0]]=element[1];
+            
+        });
+    
+
+return JSON.stringify( output);
+
+    }
+    var data=[["name","ford"],["model","mustang"],["year","1964"]]
+            document.getElementById("print").innerHTML=ListToObject(data);
+</script>
+    
+</body>
+</html>
