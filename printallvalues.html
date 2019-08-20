@@ -1,0 +1,41 @@
+/*Parsing an JSON object’s Values:
+Write a function called “printAllValues” which returns an newArray of all the input object’s values.
+Input (Object):
+var object = {name: “RajiniKanth”, age: 33, hasPets : false};
+Output:
+[“RajiniKanth”, 33, false]
+Sample Function proto:
+var obj = {name : “RajiniKanth”, age : 33, hasPets : false};
+function printAllValues(obj) {
+ // your code here
+}*/
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+    <script>
+        function printAllValues(obj)
+        {
+            var output=[];
+            objkeys=Object.keys(obj)
+            objkeys.forEach(element => {
+                output.push(obj[element])
+            });
+            return output;
+        }
+        var obj={
+            name:"rajinikanth",
+            age:33,
+            haspets:"false",
+            isceleb:"yes"
+        }
+        document.getElementById("print").innerHTML=printAllValues(obj)
+    </script>
+</body>
+</html>
