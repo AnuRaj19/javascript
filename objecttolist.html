@@ -1,0 +1,46 @@
+Parsing an JSON object and convert it to a list:
+Write a function called “convertObjectToList” which converts an object literal into an array of arrays.
+Input (Object):
+var object = {name: “ISRO”, age: 35, role: “Scientist”};
+Output:
+[[“name”, “ISRO”], [“age”, 35], [“role”, “Scientist”]]
+Sample Function proto:
+var obj = {name: “ISRO”, age: 35, role: “Scientist”};
+function convertListToObject(obj) {
+ // your code here
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+    <script>
+    function objectToList(data){
+    var output=[];
+
+objkeys=Object.keys(data);
+objkeys.forEach(element => {
+    var innerarray=[];
+    innerarray.push(element,data[element]);
+    output.push (innerarray);
+});
+
+return JSON.stringify( output);
+
+    }
+    var data={
+        name:"isro",
+        age:33,
+        role:"scientist"
+            }
+            document.getElementById("print").innerHTML=objectToList(data);
+</script>
+    
+</body>
+</html>
